@@ -1,0 +1,65 @@
+body{
+    height: 100vh;
+    margin: 0;
+    
+    color: whitesmoke;
+    background-color: #39383a;
+}
+
+img{
+    display: flex;
+    border-radius: 32px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+
+    border-radius: 16px;
+    width: 400px;
+}
+
+button{
+    width: 100px;
+    height: 50px;  
+
+    border-radius: 8px;
+    border-style: hidden;
+}
+
+.rpsMain{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}   
+
+.rpsContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    padding: 16px;
+    border-radius: 32px;
+    background-color: #2b2a2c;
+}
+
+.inputs{
+    width: 350px;
+    padding: 16px;
+
+    justify-content: space-between;
+    display: flex;
+}   
+
+.outputs{
+    text-align: center;
+
+    background-color: #867e8d;
+    border-radius: 16px;
+    width: 350px;
+}
+
+
+
