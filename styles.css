@@ -54,12 +54,36 @@ button{
 }   
 
 .outputs{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
-    background-color: #867e8d;
-    border-radius: 16px;
-    width: 350px;
+    font-size: 32px;
+    width: 400px;
 }
 
+#playerScore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    width: 100px;
+    height: 100px;
 
+    border-radius: 8px;
+    background-color: rgb(243, 107, 73);
+  
+}
+
+#computerScore{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    
+    width: 100px;
+    height: 100px;
+
+    border-radius: 8px;
+    background-color: rgb(104, 238, 51);
+   
+}
