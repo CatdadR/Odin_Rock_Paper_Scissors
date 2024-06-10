@@ -42,17 +42,17 @@ function playRound(){
     if(playerDecision == computerDecision){
         alert("draw")
     } else if(playerDecision == "rock" && computerDecision == "paper"){
-        alert("Computer win")
+        computerScore.textContent = ++computerScore.textContent
     } else if(playerDecision == "paper" && computerDecision == "rock"){
-        alert("Player win")
+        playerScore.textContent = ++playerScore.textContent
     } else if(playerDecision == "rock" && computerDecision == "scissors"){
-        alert("Player win")
+        playerScore.textContent = ++playerScore.textContent
     } else if(playerDecision == "scissors" && computerDecision == "rock"){
-        alert("computer win")
+        computerScore.textContent = ++computerScore.textContent
     } else if(playerDecision == "paper" && computerDecision == "scissors"){
-        alert("computer win")
+        computerScore.textContent = ++computerScore.textContent
     } else if(playerDecision == "scissors" && computerDecision == "paper"){
-        alert("player win")
+        playerScore.textContent = ++playerScore.textContent
     }
 
 }
