@@ -9,6 +9,8 @@ body{
 img{
     display: flex;
     border-radius: 32px;
+    height: 400px;
+    width: 400px;
 }
 
 h1{
@@ -62,6 +64,12 @@ button{
 
     font-size: 32px;
     width: 400px;
+}
+
+#playBtn{
+    height: 100px;
+    font-size: 24px;
+    background-color: #39383a;
 }
 
 #playerScore{
