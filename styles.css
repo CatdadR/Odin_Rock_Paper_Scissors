@@ -24,6 +24,8 @@ button{
     width: 100px;
     height: 50px;  
 
+    color:azure;
+    font-weight: bolder;
     border-radius: 8px;
     border-style: hidden;
 }
@@ -71,8 +73,7 @@ button{
     height: 100px;
 
     border-radius: 8px;
-    background-color: rgb(243, 107, 73);
-  
+    background-color:#39383a;  
 }
 
 #computerScore{
@@ -84,6 +85,15 @@ button{
     height: 100px;
 
     border-radius: 8px;
-    background-color: rgb(104, 238, 51);
-   
+    background-color: #39383a;
+}
+
+.Rock{
+    background-color: #FF1212;
+}
+.Paper{
+    background-color: #51D6FF;
+}
+.Scissors{
+    background-color: #C2E812;
 }
