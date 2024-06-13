@@ -6,9 +6,7 @@ let scissors = 3
 let playerDecision 
 let computerDecision
 
-let pScoreBox = document.getElementById("playerScore")
-let cScoreBox = document.getElementById("computerScore")
-
+let roundCount = 0
 
 function getPlayerChoice(playerChoice){
    
@@ -40,37 +38,50 @@ function getComputerChoice(){
 }
 
 function playRound(){
-    
     getComputerChoice();
-
+    
+    let pScore = playerScore.textContent
+    let cScore = computerScore.textContent
+    let topPlayer
+    roundCount = ++roundCount
 
     //Rock paper scissors win-lose logic//
-    if(playerDecision == computerDecision){
-    } else if(playerDecision == "rock" && computerDecision == "paper"){
-        computerScore.textContent = ++computerScore.textContent
-    } else if(playerDecision == "paper" && computerDecision == "rock"){
-        playerScore.textContent = ++playerScore.textContent
-    } else if(playerDecision == "rock" && computerDecision == "scissors"){
-        playerScore.textContent = ++playerScore.textContent
-    } else if(playerDecision == "scissors" && computerDecision == "rock"){
-        computerScore.textContent = ++computerScore.textContent
-    } else if(playerDecision == "paper" && computerDecision == "scissors"){
-        computerScore.textContent = ++computerScore.textContent
-    } else if(playerDecision == "scissors" && computerDecision == "paper"){
-        playerScore.textContent = ++playerScore.textContent
-    } 
+        if(playerDecision == computerDecision){
+            roundCount = --roundCount
+        } else if(playerDecision == "rock" && computerDecision == "paper"){
+            cScore = ++computerScore.textContent
+        } else if(playerDecision == "paper" && computerDecision == "rock"){
+            pScore = ++playerScore.textContent
+        } else if(playerDecision == "rock" && computerDecision == "scissors"){
+            pScore = ++playerScore.textContent
+        } else if(playerDecision == "scissors" && computerDecision == "rock"){
+            cScore = ++computerScore.textContent
+        } else if(playerDecision == "paper" && computerDecision == "scissors"){
+            cScore = ++computerScore.textContent
+        } else if(playerDecision == "scissors" && computerDecision == "paper"){
+            pScore = ++playerScore.textContent
+        } 
     //Who has higher score//
-    if(playerScore.textContent == computerScore.textContent){
-        document.getElementById("playerScore").style.backgroundColor = "rgb(238, 210, 51)";
-        document.getElementById("computerScore").style.backgroundColor = "rgb(238, 210, 51)";
-    }else if(playerScore.textContent > computerScore.textContent){
-        document.getElementById("playerScore").style.backgroundColor = "rgb(104, 238, 51";
-        document.getElementById("computerScore").style.backgroundColor = "rgb(243, 107, 73)";
-    }else if(playerScore.textContent < computerScore.textContent){
-        document.getElementById("playerScore").style.backgroundColor = "rgb(243, 107, 73)";
-        document.getElementById("computerScore").style.backgroundColor = "rgb(104, 238, 51";
-    }
+        if(pScore == cScore){
+            document.getElementById("playerScore").style.backgroundColor = "rgb(238, 210, 51)";
+            document.getElementById("computerScore").style.backgroundColor = "rgb(238, 210, 51)";
+            document.getElementById("rImg").src = "Images/Tie.png"
+            topPlayer = "No one "
+        }else if(pScore > cScore){
+            document.getElementById("playerScore").style.backgroundColor = "rgb(104, 238, 51";
+            document.getElementById("computerScore").style.backgroundColor = "rgb(243, 107, 73)";
+            document.getElementById("rImg").src = "Images/Tick.png"
+            topPlayer = "Player"
 
-
+        }else if(pScore < cScore){
+            document.getElementById("playerScore").style.backgroundColor = "rgb(243, 107, 73)";
+            document.getElementById("computerScore").style.backgroundColor = "rgb(104, 238, 51";
+            document.getElementById("rImg").src = "Images/Cross.png"
+            topPlayer = "Computer"
+        }
+        if(roundCount == 6){    
+            alert(topPlayer + "Wins!")
+        }
 }
+
 
