@@ -1,9 +1,13 @@
+
 let rock = 1
 let paper = 2
 let scissors = 3
 
 let playerDecision 
 let computerDecision
+
+let pScoreBox = document.getElementById("playerScore")
+let cScoreBox = document.getElementById("computerScore")
 
 
 function getPlayerChoice(playerChoice){
@@ -39,8 +43,9 @@ function playRound(){
     
     getComputerChoice();
 
+
+    //Rock paper scissors win-lose logic//
     if(playerDecision == computerDecision){
-        alert("draw")
     } else if(playerDecision == "rock" && computerDecision == "paper"){
         computerScore.textContent = ++computerScore.textContent
     } else if(playerDecision == "paper" && computerDecision == "rock"){
@@ -53,7 +58,19 @@ function playRound(){
         computerScore.textContent = ++computerScore.textContent
     } else if(playerDecision == "scissors" && computerDecision == "paper"){
         playerScore.textContent = ++playerScore.textContent
+    } 
+    //Who has higher score//
+    if(playerScore.textContent == computerScore.textContent){
+        document.getElementById("playerScore").style.backgroundColor = "rgb(238, 210, 51)";
+        document.getElementById("computerScore").style.backgroundColor = "rgb(238, 210, 51)";
+    }else if(playerScore.textContent > computerScore.textContent){
+        document.getElementById("playerScore").style.backgroundColor = "rgb(104, 238, 51";
+        document.getElementById("computerScore").style.backgroundColor = "rgb(243, 107, 73)";
+    }else if(playerScore.textContent < computerScore.textContent){
+        document.getElementById("playerScore").style.backgroundColor = "rgb(243, 107, 73)";
+        document.getElementById("computerScore").style.backgroundColor = "rgb(104, 238, 51";
     }
+
 
 }
 
