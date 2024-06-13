@@ -11,15 +11,15 @@
     <div class="rpsMain">
         <div class="rpsContent">
             <h1>Rock Paper Scissors</h1>
-            <img src="https://fakeimg.pl/400x400" alt="Placeholder">
+            <img id="rImg" src="https://fakeimg.pl/400x400" alt="Placeholder">
             <div class="inputs">
-                <button onclick="getPlayerChoice(1)" class="rock">Rock</button>
-                <button onclick="getPlayerChoice(2)" class="Get">Paper</button>
+                <button onclick="getPlayerChoice(1)" class="Rock">Rock</button>
+                <button onclick="getPlayerChoice(2)" class="Paper">Paper</button>
                 <button onclick="getPlayerChoice(3)" class="Scissors">Scissors</button>
             </div>
             <div class="outputs">
                 <p id="playerScore">0</p>
-                <button onclick="playRound()">play</button>
+                <button id="playBtn" onclick="playRound()">Play</button>
                 <p id="computerScore">0</p>   
             </div>
         </div>
